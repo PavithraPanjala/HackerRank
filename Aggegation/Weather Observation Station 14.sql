@@ -1,0 +1,6 @@
+/* Weather Observation Station 14 */
+
+SELECT TOP 1 CAST(LAT_N AS NUMERIC(10,4))
+FROM Station
+WHERE LAT_N < 137.2345
+ORDER BY LAT_N DESC

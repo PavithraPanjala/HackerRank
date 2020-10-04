@@ -1,0 +1,5 @@
+/* Weather Observation Station 13 */
+
+SELECT CAST(SUM(LAT_N) AS NUMERIC(10,4))
+FROM Station
+WHERE LAT_N BETWEEN 38.7880 AND 137.2345

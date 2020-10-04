@@ -1,0 +1,7 @@
+/* Top Earners */
+
+SELECT earnings, COUNT(*)
+FROM (SELECT TOP 1 WITH TIES *, (SALARY * MONTHS) AS earnings
+    FROM EMPLOYEE
+    ORDER BY RANK() OVER (ORDER BY (SALARY * MONTHS) DESC)) AS A
+GROUP BY earnings

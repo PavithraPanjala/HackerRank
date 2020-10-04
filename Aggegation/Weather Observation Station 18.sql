@@ -1,0 +1,4 @@
+/* Weather Observation Station 18 */
+
+SELECT CAST(ABS(MIN(LAT_N) - MAX(LAT_N)) + ABS(MIN(LONG_W) - MAX(LONG_W)) AS NUMERIC(20,4))
+FROM STATION
